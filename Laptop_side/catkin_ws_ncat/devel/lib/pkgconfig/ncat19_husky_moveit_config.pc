@@ -1,0 +1,8 @@
+prefix=/home/live4jesus/catkin_ws_ncat/devel
+
+Name: ncat19_husky_moveit_config
+Description: Description of ncat19_husky_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

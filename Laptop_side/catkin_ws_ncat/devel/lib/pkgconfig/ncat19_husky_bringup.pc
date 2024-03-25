@@ -1,0 +1,8 @@
+prefix=/home/live4jesus/catkin_ws_ncat/devel
+
+Name: ncat19_husky_bringup
+Description: Description of ncat19_husky_bringup
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

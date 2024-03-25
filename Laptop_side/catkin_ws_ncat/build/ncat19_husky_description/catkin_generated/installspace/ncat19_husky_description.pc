@@ -1,0 +1,8 @@
+prefix=/home/live4jesus/catkin_ws_ncat/install
+
+Name: ncat19_husky_description
+Description: Description of ncat19_husky_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

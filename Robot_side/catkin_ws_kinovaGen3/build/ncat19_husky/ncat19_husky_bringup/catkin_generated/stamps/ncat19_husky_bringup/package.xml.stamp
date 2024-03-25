@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+	<name>ncat19_husky_bringup</name>
+	<version>0.0.0</version>
+	<description>A repository for the ncat19_husky_bringup</description>
+	<maintainer email="code@clearpathhuskyics.com">Clearpath Team</maintainer>
+	<license>BSD</license>
+	<buildtool_depend>catkin</buildtool_depend>
+	<run_depend>husky_description</run_depend>
+
+</package>

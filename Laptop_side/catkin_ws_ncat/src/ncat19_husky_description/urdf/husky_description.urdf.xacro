@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- Dont forget to use existing ENV variables in devel/setup.bash to your advantag!-->
+
+  <!-- If you don't know a joint name just open the robot in Rviz -->
+
+  <!-- Variable example representing your .stl file of your assembly-->
+  <xacro:include filename="$(find husky_kinova_description)/urdf/husky_gen3_robotiq_2f_85_description.urdf.xacro" />
+
+  <!-- raise the kinova by its attachment plate -->
+
+  <link name="kinova_plate">
+    <visual>
+      <geometry>
+        <box size="0.13 0.13 0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.13 0.13 0.005"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="kinova_platform_link" type="fixed">
+    <parent link="top_plate_front_link" />
+    <child link="kinova_plate" />
+    <origin xyz="-0.106 0 .0025" rpy="0 0 0" />
+  </joint>
+
+  <!--Mounting Structure-->
+  <link name="mounting_structure">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="black"/>
+      <geometry>
+        <mesh filename="package://ncat19_husky_description/meshes/husky_description.STL"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ncat19_husky_description/meshes/husky_description.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_platform_link" type="fixed">
+    <parent link="base_link" />
+    <child link="mounting_structure" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+</robot>
